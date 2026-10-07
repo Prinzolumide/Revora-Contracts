@@ -93,10 +93,7 @@ fn proposal_records_new_issuer_timestamp_and_default_expiry_sentinel() {
     let details = pending_details(&env, &contract_id, &issuer, &token);
     assert_eq!(details.new_issuer, new_issuer);
     assert_eq!(details.timestamp, 1_700_000_000);
-    assert_eq!(
-        details.expiry_secs, 0,
-        "0 is the documented sentinel for the default 7-day window"
-    );
+    assert_eq!(details.expiry_secs, 0, "0 is the documented sentinel for the default 7-day window");
 }
 
 #[test]
