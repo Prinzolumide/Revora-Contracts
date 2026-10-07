@@ -60,11 +60,7 @@ fn register(
 }
 
 fn ids(env: &Env) -> (Address, Symbol, Address) {
-    (
-        Address::generate(env),
-        Symbol::new(env, "ns"),
-        Address::generate(env),
-    )
+    (Address::generate(env), Symbol::new(env, "ns"), Address::generate(env))
 }
 
 #[test]
